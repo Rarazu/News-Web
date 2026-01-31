@@ -9,8 +9,8 @@ Portal berita berbasis Web yang dikembangkan untuk menyajikan wawasan masa depan
 ## 👥 Team Assignment
 
 * **Rara Zahra Urava** — `2702440026`
-* **Jeslin Kay Sutandy** — `2702413353`
 * **Frederico Elvin** — `2702437706`
+* **Jeslin Kay Sutandy** — `2702413353`
 
 ---
 
