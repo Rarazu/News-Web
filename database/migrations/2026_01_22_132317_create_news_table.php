@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+
+    public function up(): void
+    {
+        Schema::create('news', function (Blueprint $table) {
+            $table->bigIncrements('id_artikel');
+        
+            $table->unsignedBigInteger('id_category');
+            $table->unsignedBigInteger('id_user');
+        
+            $table->string('title');
+            $table->text('content');
+            $table->string('imagePath')->nullable();
+            $table->string('status');
+        
+            $table->timestamps();
+        
+            // RELASI
+            $table->foreign('id_category')
+                  ->references('id_category')
+                  ->on('categories')
+                  ->onDelete('cascade');
+        
+            $table->foreign('id_user')
+                  ->references('id_user')
+                  ->on('users')
+                  ->onDelete('cascade');
+        });
+        
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('news');
+    }
+};

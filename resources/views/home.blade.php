@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-hero />
-    <x-trending />
+    <x-hero :news="$heroNews" />
+    
+    <x-trending :articles="$trendingNews" />
+
+    <x-latest :articles="$allNews" />
 @endsection
